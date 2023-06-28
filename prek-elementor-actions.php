@@ -3,7 +3,7 @@
  * Plugin Name: Elementor Form Actions - Prek
  * Description: Custom addon which adds various form actions.
  * Plugin URI:  https://prek.no
- * Version:     1.0.0
+ * Version:     1.0.1
  * Author:      Prek AS
  * Author URI:  https://prek.no
  * Text Domain: prek-elementor-actions
