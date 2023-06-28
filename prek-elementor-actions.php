@@ -8,6 +8,9 @@
  * Author URI:  https://prek.no
  * Text Domain: prek-elementor-actions
  *
+ * GitHub Plugin URI: prek-no/wp-elementor-actions
+ * GitHub Plugin URI: https://github.com/prek-no/wp-elementor-actions
+ *
  * Elementor tested up to: 3.7.0
  * Elementor Pro tested up to: 3.7.0
  */
