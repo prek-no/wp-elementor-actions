@@ -162,7 +162,7 @@ class Cookies_Action_After_Submit extends \ElementorPro\Modules\Forms\Classes\Ac
             $cookie_name_prefix = $cookie['cookie_name_prefix'];
             $cookie_name_suffix = $cookie['cookie_name_suffix'];
             $cookie_value = $cookie['cookie_value'];
-            $cookie_time = $cookie['cookie_time'] ?? '3600';
+            $cookie_time = $cookie['cookie_time'] ?? 3600;
 
             // Get submitted Form data
             $raw_fields = $record->get( 'fields' );
@@ -181,7 +181,11 @@ class Cookies_Action_After_Submit extends \ElementorPro\Modules\Forms\Classes\Ac
                 $cookie_value = $formFields[$cookie_value];
             }
 
-            setcookie($cookie_name_prefix . $cookie_name . $cookie_name_suffix, $cookie_value, time() + $cookie_time, '/' );
+            $cookie_name = $cookie_name_prefix . $cookie_name . $cookie_name_suffix;
+
+            setcookie($cookie_name, $cookie_value, time() + $cookie_time, '/' );
+
+            do_action('prek_cookie_saved', $cookie_name, $cookie_value, $cookie_time);
         }
     }
 }

@@ -27,10 +27,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return void
  */
 function prek_add_form_actions( $form_actions_registrar ) {
-
     include_once( __DIR__ .  '/actions/action-cookies.php' );
 
-    $form_actions_registrar->register( new Cookies_Action_After_Submit() );
-
+    $form_actions_registrar->register(new Cookies_Action_After_Submit());
 }
 add_action( 'elementor_pro/forms/actions/register', 'prek_add_form_actions' );
